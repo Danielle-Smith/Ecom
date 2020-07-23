@@ -1,16 +1,26 @@
+
 import React, { Component } from 'react';
 
 import SignUpForm from './signupForm';
 import PageTitle from '../pageTitle';
 
-class Signup extends Component {
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
+
+class SignUp extends Component {
+
+    // componentDidMount() {
+    //     this.props.setHeaderLinks([]);
+    //     this.props.setNavbarLinks([]);
+    // }
+
     onSubmit = (fields) => {
         console.log(fields);
     }
 
     render() {
-        return(
-            <div className='sign-up__form'>
+        return (
+            <div className='sign-up'>
                 <PageTitle className='sign-up__page-title' title='Register' />
                 <SignUpForm onSubmit={this.onSubmit} className='sign-up__form' />
             </div>
@@ -18,4 +28,6 @@ class Signup extends Component {
     }
 }
 
-export default Signup;
+SignUp = connect(null, actions)(SignUp);
+
+export default SignUp;

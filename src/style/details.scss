@@ -1,7 +1,7 @@
+
 .details {
     display: grid;
     grid-row-gap: 13px;
-    margin-left: 250px;
 
     &__title {
         padding-bottom: 7px;
@@ -16,6 +16,9 @@
         grid-row-gap: 10px;
         & > * {
             text-decoration-line: underline;
+        }
+        .details__item {
+            text-decoration-line: none;
         }
     }
 }
