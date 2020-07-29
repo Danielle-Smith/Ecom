@@ -42,7 +42,6 @@ class Account extends Component {
     }
 
     renderContent() {
-        return <h1> Content </h1>
         let jsx;
         if(this.props.navbarLinks) {
             this.props.navbarLinks.forEach(link => {
