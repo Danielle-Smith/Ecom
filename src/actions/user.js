@@ -101,17 +101,6 @@ export function fetchUserPurchases() {
                     name: 'Jordan Hudgens',
                     shippingAddress: '1234 West State Street'
                 }
-            },
-            {
-                _id: 8,
-                total: 19.90,
-                orderNumber: 'DJK898JDKS',
-                orderDate: new Date().toDateString(),
-                creditCard: '-0000',
-                user: {
-                    name: 'Jordan Hudgens',
-                    shippingAddress: '1234 West State Street'
-                }
             }
         ]
     })
