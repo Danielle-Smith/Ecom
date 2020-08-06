@@ -12,8 +12,8 @@ class AccountInformation extends Component {
     render() {
         return (
             <div className='account-information'>
-                <Pagetitle className='account-information' title='Account Information' />
-                <AccountInformationForm onSubmit={thisonSubmit} className='account-information__form' />
+                <PageTitle className='account-information' title='Account Information' />
+                <AccountInformationForm onSubmit={this.onSubmit} className='account-information__form' />
             </div>
         )
     }
