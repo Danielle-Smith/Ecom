@@ -4,7 +4,7 @@ import PageTitle from '../pageTitle';
 import AccountInformationForm from './accountInformationForm';
 
 class AccountInformation extends Component {
-
+  
     onSubmit = (fields) => {
         console.log(fields);
     }

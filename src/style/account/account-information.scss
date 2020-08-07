@@ -49,15 +49,11 @@
         }
     }
 
-    &__change-password {
-        transform: translateY(38px);
-    }
-
     &__change-password,
     &__current {
         grid-column: s/m;
         grid-row: change-password-s/change-password-e;
-        // transform: translateY(-38px);
+        transform: translateY(-38px);
     }
 
     &__new {
