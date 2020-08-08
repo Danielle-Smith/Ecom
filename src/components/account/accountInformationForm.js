@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { reduxForm, Field } from 'redux-form';
 
 import { FormInput, FormButton, LongGrayButton } from '../formFields';
@@ -6,18 +7,18 @@ import { FormInput, FormButton, LongGrayButton } from '../formFields';
 import history from '../../history';
 
 class AccountInformationForm extends Component {
+
     constructor() {
-        super() 
+        super()
         
         this.state = {
             showPasswords: false
         }
     }
 
-
     render() {
         const { className, handleSubmit } = this.props;
-
+    
         return (
             <form onSubmit={handleSubmit} className={`${className} account-information-form`}>
                 <Field className='account-information-form__name'
@@ -32,6 +33,7 @@ class AccountInformationForm extends Component {
                 placeholder='Email'
                 name='email'
                 component={FormInput}/>
+
                 <Field className='account-information-form__street-address'
                 type='address'
                 title='Street Address'
@@ -44,6 +46,8 @@ class AccountInformationForm extends Component {
                 placeholder='City'
                 name='city'
                 component={FormInput}/>
+
+
                 <Field className='account-information-form__state'
                 type='state'
                 title='State'
@@ -60,7 +64,7 @@ class AccountInformationForm extends Component {
                 {
                     this.state.showPasswords ?
                         [
-                            <Field Key={0} className='account-information-form__current'
+                            <Field key={0} className='account-information-form__current'
                             type='password'
                             title='Current Password'
                             placeholder='Current Password'
@@ -78,7 +82,7 @@ class AccountInformationForm extends Component {
                             placeholder='Confirm Password'
                             name='confirm'
                             component={FormInput}/>,
-                            <Field key={3} className='account-information-form__update-informtion'
+                            <Field key={3} className='account-information-form__update-information'
                             onClick={() => this.setState({ showPasswords: false })}
                             type='submit'
                             title='Update Information'
@@ -92,6 +96,7 @@ class AccountInformationForm extends Component {
                             short={true}
                             component={FormButton}/>
                         ]
+          
                     :
                         <Field className='account-information-form__change-password'
                         onClick={() => this.setState({ showPasswords: true })}
@@ -100,12 +105,12 @@ class AccountInformationForm extends Component {
                         title='Change Password'
                         name='change-password'
                         component={LongGrayButton}/>
-
                 }
             </form>
         )
     }
 }
+
 AccountInformationForm = reduxForm({
     form: 'AccountInformationForm'
 })(AccountInformationForm);
