@@ -5,10 +5,10 @@ import {
     FILTER_PRODUCTS_WITH_CATEGORY_ID,
     FILTER_PRODUCTS_WITH_QUERY
 } from './types';
-import { filterProductsWithQuery } from '.';
+
 import { Fields } from 'redux-form';
 
-export function filterProductsWithQuery(Fields) {
+export function filterProductsWithQuery(fields) {
     return({
         type: FILTER_PRODUCTS_WITH_QUERY,
         payload: fields

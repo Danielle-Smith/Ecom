@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
-import ShopCart from './shopCart';
-import CartButton from './cartButton';
+// import ShopCart from './shopCart';
+// import CartButton from './cartButton';
 
 class Shop extends Component {
 
@@ -65,11 +65,11 @@ class Shop extends Component {
                         })
                     }
                 </div>
-                {
+                {/* {
                     this.state.showCart ? <ShopCart className='shop__cart'/> : ''
-                }
+                } */}
                 
-                <CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus'/>
+                {/* <CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus'/> */}
             </div>
         )
     }
