@@ -57,8 +57,10 @@ class Shop extends Component {
             <div className='shop'>
                 <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
                 <div className='shop__products'>
+                    {console.log(this.props.filteredProducts)}
                     {
                         this.props.filteredProducts.map(product => {
+                            console.log(product);
                             return (
                                 <ShopProduct {...product} key={product._id} />
                             )
