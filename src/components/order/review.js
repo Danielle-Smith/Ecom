@@ -28,6 +28,6 @@ class Review extends Component {
     }
 }
 
-Review = connect(null, action)(Review);
+Review = connect(null, actions)(Review);
 
 export default Review; 

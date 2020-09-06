@@ -1,8 +1,8 @@
-import React, { Component } form 'react';
+import React, { Component } from 'react';
 
-import { reduxForm, Field } form 'redux-form';
+import { reduxForm, Field } from 'redux-form';
 
-import { FormButton } '../formFields';
+import { FormButton } from '../formFields';
 
 import history from '../../history';
 
@@ -14,7 +14,7 @@ class ReviewForm extends Component {
             <form onSubmit={handleSubmit} className={`${className} rebiew-form`}>
                 <div className='review-form__line'></div>
                 <Field className='review-form__proceed'
-                onClick={() => history.push('/account')}
+                onClick={() => history.push('/signin')}
                 type='submit'
                 title='Proceed to Checkout'
                 name='proceed'
@@ -31,7 +31,7 @@ class ReviewForm extends Component {
     }
 }
 
-RevireForm = reduxForm({
+ReviewForm = reduxForm({
     form: 'ReviewForm'
 })(ReviewForm);
 
