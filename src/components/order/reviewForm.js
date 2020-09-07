@@ -11,7 +11,7 @@ class ReviewForm extends Component {
         const { className, handleSubmit } = this.props;
 
         return (
-            <form onSubmit={handleSubmit} className={`${className} rebiew-form`}>
+            <form onSubmit={handleSubmit} className={`${className} review-form`}>
                 <ReviewProducts className='review-form__products'/>
                 <div className='review-form__line'></div>
                 <Field className='review-form__proceed'

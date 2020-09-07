@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
@@ -7,9 +7,10 @@ class ReviewProducts extends Component {
         const { className } = this.props;
         return (
             <div className={`${className} review-products`}>
+                jkhkjdhkjfhdjksahfjk
                 {
                     this.props.cartProducts.map(cartProduct => {
-                        return <h1 key={cartProduct._id}>{cartProduct.product.title}</h1>
+                        return <ReviewProduct key={cartProduct._id}{...cartProduct}/>
                     })
                 }
             </div>
