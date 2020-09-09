@@ -4,7 +4,7 @@ import { UnderlinedTitle, InfoTitle } from './infoHelp';
 
 import { connect } from 'react-redux';
 
-class OrderSummary extends Compnent {
+class OrderSummary extends Component {
     render() {
         const { className } = this.props;
         let subtotal = 0;
